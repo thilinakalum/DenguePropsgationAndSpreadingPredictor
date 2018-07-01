@@ -1,7 +1,9 @@
-/CarePointMobile/target/
+/dengue-propagation-and-spread-predictor/target/
 
-/CarePointMobile/node_modules/
+/dengue-propagation-and-spread-predictor/node_modules/
 
-/CarePointMobile/bower_components/
+/dengue-propagation-and-spread-predictor/bower_components/
 
-/CarePointMobile/src/main/resources/static/
+/dengue-propagation-and-spread-predictor/src/main/resources/static/
+
+/dengue-propagation-and-spread-predictor/target/
