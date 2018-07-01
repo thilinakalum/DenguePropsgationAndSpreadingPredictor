@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.final_project;
+package com.mac;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  *
- * @author kalum
+ * @author kavish manjitha
  */
 @SpringBootApplication
 @Configuration

@@ -4,11 +4,11 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.mac.care_point.manager_dashboard.model.TJobCard</class>
     <class>com.mac.care_point.manager_dashboard.model.MBranch</class>
-    <class>edu.final_project.dpasp.entity.MohPatientsDetails</class>
-    <class>edu.final_project.dpasp.entity.User</class>
-    <class>edu.final_project.dpasp.entity.Districts</class>
-    <class>edu.final_project.dpasp.entity.Patients</class>
-    <class>edu.final_project.dpasp.entity.Moh</class>
+    <class>com.mac.care_point.entity.Patients</class>
+    <class>com.mac.care_point.entity.Moh</class>
+    <class>com.mac.care_point.entity.MohPatientsDetails</class>
+    <class>com.mac.care_point.entity.User</class>
+    <class>com.mac.care_point.entity.Districts</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/care_point?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

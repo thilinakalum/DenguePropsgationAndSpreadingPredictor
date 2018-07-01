@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.final_project.dpasp.controller;
+package com.mac.care_point.controller;
 
-import edu.final_project.dpasp.entity.Districts;
-import edu.final_project.dpasp.service.DistrictsService;
+import com.mac.care_point.entity.Districts;
+import com.mac.care_point.service.DistrictsService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.final_project.dpasp.service;
+package com.mac.care_point.service;
 
-import edu.final_project.dpasp.entity.Moh;
-import edu.final_project.dpasp.repository.MohRepository;
+import com.mac.care_point.entity.Moh;
+import com.mac.care_point.repository.MohRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

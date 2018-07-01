@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.final_project.dpasp.entity;
+package com.mac.care_point.entity;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -20,8 +20,8 @@ import javax.validation.constraints.Size;
  * @author kalum
  */
 @Entity
-@Table(name = "moh")
-public class Moh implements Serializable {
+@Table(name = "districts")
+public class Districts implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,23 +33,19 @@ public class Moh implements Serializable {
     @Column(name = "name")
     private String name;
     
-    @Column(name = "total_population")
-    private Integer totalPopulation;
+    @Column(name = "no_of_moh")
+    private Integer noOfMoh;
     
-//    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-    @Column(name = "fk_district")
-    private Integer fkDistrict;
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "fkDistrict", fetch = FetchType.EAGER)
+//    private List<Moh> mohList;
     
-//    @OneToMany(mappedBy = "fkMoh", fetch = FetchType.EAGER)
-//    private List<Patients> patientsList;
-//    
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "fkMoh", fetch = FetchType.EAGER)
-//    private List<MohPatientsDetails> mohPatientsDetailsList;
+//    @OneToMany(mappedBy = "fkDistrict", fetch = FetchType.EAGER)
+//    private List<User> userList;
 
-    public Moh() {
+    public Districts() {
     }
 
-    public Moh(Integer indexNo) {
+    public Districts(Integer indexNo) {
         this.indexNo = indexNo;
     }
 
@@ -69,20 +65,11 @@ public class Moh implements Serializable {
         this.name = name;
     }
 
-    public Integer getTotalPopulation() {
-        return totalPopulation;
+    public Integer getNoOfMoh() {
+        return noOfMoh;
     }
 
-    public void setTotalPopulation(Integer totalPopulation) {
-        this.totalPopulation = totalPopulation;
+    public void setNoOfMoh(Integer noOfMoh) {
+        this.noOfMoh = noOfMoh;
     }
-
-    public Integer getFkDistrict() {
-        return fkDistrict;
-    }
-
-    public void setFkDistrict(Integer fkDistrict) {
-        this.fkDistrict = fkDistrict;
-    }
-
 }

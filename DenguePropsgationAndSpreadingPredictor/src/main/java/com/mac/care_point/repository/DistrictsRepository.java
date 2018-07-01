@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.final_project.dpasp.repository;
+package com.mac.care_point.repository;
 
-import edu.final_project.dpasp.entity.Patients;
+import com.mac.care_point.entity.Districts;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author kalum
  */
-public interface PatientsRepository extends JpaRepository<Patients, Integer>{
+public interface DistrictsRepository extends JpaRepository<Districts, Integer>{
     
 }

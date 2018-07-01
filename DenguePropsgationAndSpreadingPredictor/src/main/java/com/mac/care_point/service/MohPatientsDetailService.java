@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.final_project.dpasp.service;
+package com.mac.care_point.service;
 
-import edu.final_project.dpasp.repository.MohPatientsDetailRepository;
+import com.mac.care_point.repository.MohPatientsDetailRepository;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -45,15 +45,11 @@ public class MohPatientsDetailService {
 
         list.add(previousProbability);
         list.add(currentProbability);
-        System.out.println("Previous Probability");
-        System.out.println(previousProbability);
-        System.out.println("No Of Population");
-        System.out.println(noOfpopulation);
-        System.out.println("No Of Change Gps Patients Count");
+        System.out.println("noOfChangeGpsPatients");
         System.out.println(noOfChangeGpsPatients);
-        System.out.println("Previous Probability");
+        System.out.println("previousProbability");
         System.out.println(previousProbability);
-        System.out.println("Current Probability");
+        System.out.println("currentProbability");
         System.out.println(currentProbability);
         return list;
     }

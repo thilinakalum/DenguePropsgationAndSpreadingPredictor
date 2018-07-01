@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.final_project.dpasp.service;
+package com.mac.care_point.service;
 
-import edu.final_project.dpasp.entity.Districts;
-import edu.final_project.dpasp.repository.DistrictsRepository;
+import com.mac.care_point.entity.Patients;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import com.mac.care_point.repository.PatientsRepository;
 
 /**
  *
@@ -19,13 +19,13 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-public class DistrictsService {
+public class PatientsService {
 
     @Autowired
-    private DistrictsRepository districtsRepository;
+    private PatientsRepository patiensRepository;
     
-    public List<Districts> findAllPatients() {
-        return districtsRepository.findAll();
+    public List<Patients> findAllPatients() {
+       return patiensRepository.findAll();
     }
     
 }

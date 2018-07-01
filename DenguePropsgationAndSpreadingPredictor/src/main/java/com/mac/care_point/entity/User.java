@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.final_project.dpasp.entity;
+package com.mac.care_point.entity;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
