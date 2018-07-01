@@ -1,0 +1,106 @@
+<div class="col-lg-12" style="height:calc(100vh - 100px)">
+    <div class="brand-logo">
+        <label>
+            Dengue Spread Risk Anlysis
+        </label>
+    </div>
+    <div class="col-lg-12" style="padding-top: 20px">
+        <div class="form-group">
+            <div class="col-lg-1">
+                <label class="control-label">Districts</label>
+            </div>
+            <div class="col-lg-2">
+                <select class="form-control" ng-model="data.districts">
+                    <option value="{{districts.indexNo}}" ng-repeat="districts in model.districtList">
+                        {{districts.name}}
+                    </option>
+                </select>
+            </div>
+            <div class="col-lg-1">
+                <label class="control-label">Month</label>
+            </div>
+            <div class="col-lg-3">
+                <input class="form-control" type="month" ng-model="data.month">
+            </div>
+            <div class="col-lg-1">
+                <label class="control-label">WEEK</label>
+            </div>
+            <div class="col-lg-3">
+                <select class="form-control" ng-model="data.week">
+                    <option value="1">WEEK 1</option>
+                    <option value="2">WEEK 2</option>
+                    <option value="3">WEEK 3</option>
+                    <option value="4">WEEK 4</option>
+                </select>
+            </div>
+            <div class=" col-lg-1 form-group">
+                <button type="button" class="btn btn-facebook btn-block" ng-click="ui.searchParamiter(data);">FIND</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-xs-12" >
+        <canvas id="bar" class="chart chart-bar ng-isolate-scope" 
+                chart-data="datas" 
+                chart-labels="labels" 
+                chart-series="series" 
+                chart-options="options"
+                height="30"
+                width="100"
+                chart-colors="colors">
+        </canvas>
+    </div>
+    <div class="col-lg-12" style="margin-top: 20px">
+        <div class="col-lg-5">
+            <div class="form-group" style="margin-top: 20px">
+                <div class="col-lg-4">
+                    <label class="control-label">Districts</label>
+                </div>
+                <div class="col-lg-8">
+                    <select class="form-control" ng-model="districts" ng-change="ui.getMohList(districts)">
+                        <option value="{{districts.indexNo}}" ng-repeat="districts in model.districtList">
+                            {{districts.name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 20px">
+                <div class="col-lg-4">
+                    <label class="control-label">MOH</label>
+                </div>
+                <div class="col-lg-8">
+                    <select class="form-control" ng-model="moh">
+                        <option value="{{moh.indexNo}}" ng-repeat="moh in model.mohList">
+                            {{moh.name}}
+                        </option>
+                    </select>
+                     <button type="button" class="btn btn-facebook btn-block" ng-click="ui.predictRisk(districts,moh);">SEARCH</button>
+                </div>
+            </div>
+           
+        </div>
+        <div class="col-lg-4" ng-show="datass">
+            <div class="col-lg-12 col-xs-12" >
+                <canvas id="risk" class="chart chart-bar ng-isolate-scope" 
+                        chart-data="datass" 
+                        chart-labels="labelss" 
+                        chart-series="seriess" 
+                        chart-options="options"
+                        height="70"
+                        width="100"
+                        chart-colors="colorss">
+                </canvas>
+            </div>
+        </div>
+        <div class="col-lg-4" ng-show="!datass">
+            <div class="col-lg-12 col-xs-12" >
+                No data
+            </div>
+        </div>
+        <div class="col-lg-3" ng-show="datass">
+            Previous Probability : {{datass[0]}} <br>
+            Current Probability : {{datass[1]}}
+        </div>
+    </div>
+</div>

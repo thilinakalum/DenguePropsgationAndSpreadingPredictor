@@ -1,0 +1,136 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+    <head>
+        <meta charset="utf-8">
+        <title>DPASP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="images/titel_image.png">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- Material Design fonts -->
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- Bootstrap Material Design -->
+        <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
+        <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">
+        <!--css-->
+        <!-- inject:css -->
+        <!-- endinject -->
+
+    </head>
+
+    <body ng-app="appModule">
+        <div class="app layout-fixed-header">
+
+            <!-- sidebar panel -->
+            <div class="sidebar-panel offscreen-left">
+
+                <div class="brand">
+
+                    <!-- logo -->
+                    <div class="brand-logo">
+                        <label>
+                            DPASP
+                        </label>
+                    </div>
+                    <!-- /logo -->
+
+                    <!-- toggle small sidebar menu -->
+                    <a href="javascript:;" class="toggle-sidebar hidden-xs hamburger-icon v3" data-toggle="layout-small-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                    <!-- /toggle small sidebar menu -->
+
+                </div>
+
+                <!-- main navigation -->
+                <nav role="navigation">
+
+                    <ul class="nav">
+
+                        <!-- dashboard -->
+                        <li>
+                            <a href="#/risk-anlysis">
+                                <i class="fa fa-flask"></i>
+                                <span>Risk Anlysis</span>
+                            </a>
+                        </li>
+                        <!-- /dashboard -->
+                    </ul>
+                </nav>
+                <!-- /main navigation -->
+
+            </div>
+            <!-- /sidebar panel -->
+
+            <!-- content panel -->
+            <div class="main-panel">
+
+                <!-- top header -->
+                <header class="header navbar">
+
+                    <div class="brand visible-xs">
+                        <!-- toggle offscreen menu -->
+                        <div class="toggle-offscreen">
+                            <a href="#" class="hamburger-icon visible-xs" data-toggle="offscreen" data-move="ltr">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                        <!-- /toggle offscreen menu -->
+
+                        <!-- logo -->
+                        <div class="brand-logo">
+                            <label>
+                                Dengue Propsgation And Spreading Predictor
+                            </label>
+                        </div>
+                        <!-- /logo -->
+                    </div>
+
+                    <div class="brand visible-lg">
+                        <!-- toggle offscreen menu -->
+                        <div class="toggle-offscreen">
+                            <a href="#" class="hamburger-icon visible-xs" data-toggle="offscreen" data-move="ltr">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                        <!-- /toggle offscreen menu -->
+
+                        <!-- logo -->
+                        <div class="brand-logo">
+                            <label>
+                                Dengue Propsgation And Spreading predictor
+                            </label>
+                        </div>
+                        <!-- /logo -->
+                    </div>
+                </header>
+                <!-- /top header -->
+
+                <!-- main area -->
+                <div class="main-content no-padding" style="margin-top: 15px;height: calc(100vh - 71px);">
+                    <div ng-view>
+                        <!--CONTENT OF THE APP-->
+                    </div>
+                </div>
+            </div>
+            <!-- /main area -->
+        </div>
+        <!-- /content panel -->
+        <!--js-->
+        <!-- inject:js -->
+        <!-- endinject -->
+    </body>
+</html>
