@@ -51,9 +51,10 @@ public interface MohPatientsDetailRepository extends JpaRepository<MohPatientsDe
             + "and moh.index_no = :moh ", nativeQuery = true)
     public Integer getPopulationCount(@Param("districts") Integer districts, @Param("moh") Integer moh);
 
-    @Query(value = "select count(gps.fk_petients)\n"
-            + "from gps\n"
+    @Query(value = "select count(gps.index_no) \n"
+            + "from gps \n"
             + "where gps.date >= :date \n"
-            + "and gps.fk_change_moh = :moh ", nativeQuery = true)
-    public Integer changeGpsCount(@Param("moh") Integer moh, @Param("date") String date);
+            + "and gps.fk_change_moh = :moh "
+            + "group by gps.fk_petients", nativeQuery = true)
+    public List<Object[]> changeGpsCount(@Param("moh") Integer moh, @Param("date") String date);
 }

@@ -40,11 +40,29 @@ public class MohPatientsDetailService {
         Integer noOfpopulation = mohPatientsDetailRepository.getPopulationCount(districts, moh);
 
         Double previousProbability = noOfPatients.doubleValue() / noOfpopulation.doubleValue();
-        Integer noOfChangeGpsPatients = mohPatientsDetailRepository.changeGpsCount(moh, date);
-        Double currentProbability = previousProbability * noOfpopulation.doubleValue() + previousProbability*noOfChangeGpsPatients.doubleValue() / noOfpopulation.doubleValue() + noOfChangeGpsPatients.doubleValue();
+        List<Object[]> changeGpsList = mohPatientsDetailRepository.changeGpsCount(moh, date);
+        Integer noOfChangeGpsPatients = 0;
+        for (int i = 0; i < changeGpsList.size(); i++) {
+            noOfChangeGpsPatients++;
+        }
+        Double p = previousProbability *(noOfpopulation.doubleValue()+noOfChangeGpsPatients.doubleValue())   + previousProbability * noOfChangeGpsPatients.doubleValue();
+        Double Newpopulation = noOfpopulation.doubleValue() + noOfChangeGpsPatients.doubleValue();
+        Double currentProbability = p/Newpopulation ;
 
+        Double difference = (currentProbability-previousProbability);
+        
+        System.out.println("p");
+        System.out.println(p);
+        System.out.println("Newpopulation");
+        System.out.println(Newpopulation);
+        System.out.println("noOfPatients");
+        System.out.println(noOfPatients);
+        System.out.println("noOfpopulation");
+        System.out.println(noOfpopulation);
+        
         list.add(previousProbability);
         list.add(currentProbability);
+        list.add(difference);
         System.out.println("noOfChangeGpsPatients");
         System.out.println(noOfChangeGpsPatients);
         System.out.println("previousProbability");

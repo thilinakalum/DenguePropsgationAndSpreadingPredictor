@@ -1,7 +1,7 @@
 <div class="col-lg-12" style="height:calc(100vh - 100px)">
     <div class="brand-logo">
-        <label>
-            Dengue Spread Risk Anlysis
+        <label style="font-size: 20px">
+            <b> Dengue Spread Risk Anlysis</b>
         </label>
     </div>
     <div class="col-lg-12" style="padding-top: 20px">
@@ -99,8 +99,9 @@
             </div>
         </div>
         <div class="col-lg-3" ng-show="datass">
-            Previous Probability : {{datass[0]}} <br>
-            Current Probability : {{datass[1]}}
+            <label style="font-size: 20px">Previous Probability : <b>{{datass[0]}}</b> </label><br><br>
+            <label style="font-size: 20px">Current Probability : <b>{{datass[1]}}</b> </label><br><br>
+            <label style="font-size: 20px">Risk Difference : <b>{{datass[2]}}</b> </label><br>
         </div>
     </div>
 </div>
